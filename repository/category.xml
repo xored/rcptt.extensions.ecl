@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.xored.q7.extensions.ecl_1.0.0.qualifier.jar" id="com.xored.q7.extensions.ecl" version="1.0.0.qualifier">
+      <category name="q7.extensions"/>
+   </feature>
+   <category-def name="q7.extensions" label="Q7 Extensions"/>
+</site>
