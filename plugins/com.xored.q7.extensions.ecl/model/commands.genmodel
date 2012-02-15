@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.xored.q7.extensions.ecl/gen-src"
+    modelPluginID="com.xored.q7.extensions.ecl" modelName="Commands" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" usedGenPackages="../../org.eclipse.ecl.core/model/ecl.genmodel#//core platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+  <foreignModel>commands.ecore</foreignModel>
+  <genPackages prefix="Commands" basePackage="com.xored.q7.extensions.ecl" disposableProviderFactory="true"
+      ecorePackage="commands.ecore#/">
+    <genClasses ecoreClass="commands.ecore#//GetProblemMessages"/>
+  </genPackages>
+</genmodel:GenModel>

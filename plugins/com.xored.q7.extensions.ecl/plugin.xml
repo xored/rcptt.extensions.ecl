@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.xored.com/q7/extensions/ecl/commands.ecore"
+            class="com.xored.q7.extensions.ecl.commands.CommandsPackage"
+            genModel="model/commands.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.ecl.core.scriptlet">
+      <scriptlet
+            class="com.xored.q7.extensions.ecl.internal.commands.GetProblemMessagesService"
+            name="GetProblemMessages"
+            namespace="http://www.xored.com/q7/extensions/ecl/commands.ecore"/>
+   </extension>
+w</plugin>
