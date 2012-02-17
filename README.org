@@ -1,0 +1,19 @@
+This repository is a complete example on how to create a custom [[http://github.com/xored/ecl][ECL]] command and use it in [[http://www.xored.com/products/q7/][Q7]]. 
+
+As an example, we create a custom ECL command *get-problem-messages* which returns all error messages from Problems view (more precisely, it searches for all resource markers with type 'problemmarker' and gets and error messages from them).
+
+Combined with other ECL commands, this command can be used to assert that there are no errors in Problems view, like this:
+
+#+BEGIN_SRC none
+get-problem-messages | length | eq 0 | assert-true "There are build problems"
+#+END_SRC
+
+There are two top-level folders:
+- *commands* - contains sources for a p2 repository with a custom ECL command.
+- *q7tests* - Q7 project containing tests 
+
+For convenience purposes there's a top-level *pom.xml* file which can be used to build a command and run Q7 tests using Maven 3. However in production use there's no need to rebuild commands every time and it is more efficient to build a p2 repository once and deploy to some HTTP server.
+
+The p2 repository with custom ECL commands is used as following:
+1. During development of test cases, just install features into application-under-test using *Help -> Install New Software...*
+2. During continuous integration, use [[http://help.xored.com/display/Q7/Q7+Runner#Q7Runner-Injectionoptions][injection]] to put these features into application-under-test only for the time of test execution (so that you won't get unnecessary bundles in your binary builds). 

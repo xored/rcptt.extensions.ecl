@@ -3,5 +3,9 @@
    <feature url="features/com.xored.q7.extensions.ecl_1.0.0.qualifier.jar" id="com.xored.q7.extensions.ecl" version="1.0.0.qualifier">
       <category name="q7.extensions"/>
    </feature>
+   <feature url="features/org.eclipse.ecl.core_1.1.0.qualifier.jar" id="org.eclipse.ecl.core" version="1.1.0.qualifier">
+      <category name="q7.prerequisites"/>
+   </feature>
    <category-def name="q7.extensions" label="Q7 Extensions"/>
+   <category-def name="q7.prerequisites" label="Prerequisites"/>
 </site>
