@@ -67,8 +67,8 @@
 	</repositories>
 	
 	<properties>
-		<q7-runner-version>1.1.7-RC1</q7-runner-version>
-		<q7-maven-version>1.1.6</q7-maven-version>
+		<q7-runner-version>1.2.19</q7-runner-version>
+		<q7-maven-version>1.2.19</q7-maven-version>
 	</properties>
 	
 </project>
