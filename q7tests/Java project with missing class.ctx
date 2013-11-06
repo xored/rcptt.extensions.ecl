@@ -1,12 +1,13 @@
 --- Q7 testcase ---
-Q7-vendor: www.xored.com/q7
 Format-Version: 1.0
-Element-Name: Java project with missing class
+Q7-vendor: www.xored.com/q7
 Context-Type: com.xored.q7.workspace.context
+Element-Name: Java project with missing class
 Element-Type: context
 Element-Version: 2.0
-Save-Time: 2/17/12 11:17 PM
 Id: _aIHr4Fl7EeGwqKeO_21sGA
+Q7-Runtime-Version: 1.3.9.201310250528
+Save-Time: 11/6/13 2:29 PM
 
 ------=_contents/org.example.helloworld/src/org/example/helloworld/Program.java-2736e102-17dd-3919-809b-9aae83853226
 Content-Type: q7/binary
@@ -35,12 +36,11 @@ AAAAAAAAAAAAAAAAAAAAAAAuY29udGVudFBLBQYAAAAAAQABADYAAACHAQAAAAA=
 Content-Type: q7/binary
 Entry-Name: contents/org.example.helloworld/.classpath
 
-UEsDBBQACAAIAAAAIQAAAAAAAAAAAAAAAAAIAAAALmNvbnRlbnR9j00PwUAQhs/8imbvnXIRh5aIVKIJ
-EspVtruTWtZssx/Cv0cQIuE2M3nezPOmw/NRRye0ThnKWBc6LEISRiqqM7YuJ3GfDQftVGjuXMP9btBu
-vRckby/RQZHMmLOCRffjY0x+gsLQCzS2BhRaNQ5hLz1oHkjsbq+hWObb8WJejqbzfJl8c4o8WuIaJFah
-hqCeSbSw8pwkt3IzKy8NJgU/8VUed6H3x8gE3wT/kqoU3dk0+eh8BVBLBwgbVJn+tgAAACcBAABQSwEC
-FAAUAAgACAAAACEAG1SZ/rYAAAAnAQAACAAAAAAAAAAAAAAAAAAAAAAALmNvbnRlbnRQSwUGAAAAAAEA
-AQA2AAAA7AAAAAAA
+UEsDBBQACAAIAAAAIQAAAAAAAAAAAAAAAAAIAAAALmNvbnRlbnSzsa/IzVEoSy0qzszPs1Uy1DNQUkjN
+S85PycxLt1UKDXHTtVCyt+OySc5JLC4uSCzJsOPiRHBS80qKKhWyM/NSbJWKi5KVFECCEKY+ToXJ+Xkw
+hflF6XqpyTmZBcWpelkpJXo5iaV5yRlAq/W8glzjnf39Qhw9/VyD8BiWX1pSUFoCMy8pMw+k1kYfybkA
+UEsHCBH44mqOAAAA4gAAAFBLAQIUABQACAAIAAAAIQAR+OJqjgAAAOIAAAAIAAAAAAAAAAAAAAAAAAAA
+AAAuY29udGVudFBLBQYAAAAAAQABADYAAADEAAAAAAA=
 ------=_contents/org.example.helloworld/.classpath-bd60fc95-c72c-3178-973b-d000a7f634b3--
 ------=_contents/org.example.helloworld/.project-0a9e6a37-7ef6-348d-99a1-76eb433bccf2
 Content-Type: q7/binary
