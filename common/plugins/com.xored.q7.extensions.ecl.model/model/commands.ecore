@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="commands"
-    nsURI="http://www.xored.com/q7/extensions/ecl/commands.ecore" nsPrefix="com.xored.q7.extensions.ecl.commands">
-  <eClassifiers xsi:type="ecore:EClass" name="GetProblemMessages" eSuperTypes="../../org.eclipse.ecl.core/model/ecl.ecore#//Command"/>
-</ecore:EPackage>

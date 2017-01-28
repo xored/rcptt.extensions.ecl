@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Q7 Runtime extension wrapper
-Bundle-SymbolicName: com.xored.q7.extensions.updates;singleton:=true
-Bundle-Version: 1.0.0.qualifier
-Bundle-Vendor: Xored Software Inc
-Require-Bundle: com.xored.q7.launching.ext;bundle-version="1.1.0"
