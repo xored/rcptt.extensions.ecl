@@ -13,12 +13,17 @@ package org.eclipse.rcptt.extensions.ecl.commands.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.eclipse.rcptt.ecl.core.CorePackage;
 import org.eclipse.rcptt.extensions.ecl.commands.CommandsFactory;
 import org.eclipse.rcptt.extensions.ecl.commands.CommandsPackage;
 import org.eclipse.rcptt.extensions.ecl.commands.GetProblemMessages;
+import org.eclipse.rcptt.extensions.ecl.commands.GetSupportedDevices;
+import org.eclipse.rcptt.extensions.ecl.commands.JfxClickButton;
+import org.eclipse.rcptt.extensions.ecl.commands.JfxCommand;
+import org.eclipse.rcptt.extensions.ecl.commands.JfxSelectPin;
 import org.eclipse.rcptt.extensions.ecl.commands.ShowView;
 import org.eclipse.rcptt.extensions.ecl.commands.ShowViews;
 import org.eclipse.rcptt.extensions.ecl.commands.View;
@@ -57,6 +62,34 @@ public class CommandsPackageImpl extends EPackageImpl implements CommandsPackage
 	 * @generated
 	 */
 	private EClass viewEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass getSupportedDevicesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass jfxCommandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass jfxClickButtonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass jfxSelectPinEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -199,6 +232,69 @@ public class CommandsPackageImpl extends EPackageImpl implements CommandsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getGetSupportedDevices() {
+		return getSupportedDevicesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getJfxCommand() {
+		return jfxCommandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getJfxCommand_Canvas() {
+		return (EReference)jfxCommandEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getJfxClickButton() {
+		return jfxClickButtonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJfxClickButton_Name() {
+		return (EAttribute)jfxClickButtonEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getJfxSelectPin() {
+		return jfxSelectPinEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getJfxSelectPin_Id() {
+		return (EAttribute)jfxSelectPinEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CommandsFactory getCommandsFactory() {
 		return (CommandsFactory)getEFactoryInstance();
 	}
@@ -233,6 +329,17 @@ public class CommandsPackageImpl extends EPackageImpl implements CommandsPackage
 		createEAttribute(viewEClass, VIEW__ID);
 		createEAttribute(viewEClass, VIEW__LABEL);
 		createEAttribute(viewEClass, VIEW__DESCRIPTION);
+
+		getSupportedDevicesEClass = createEClass(GET_SUPPORTED_DEVICES);
+
+		jfxCommandEClass = createEClass(JFX_COMMAND);
+		createEReference(jfxCommandEClass, JFX_COMMAND__CANVAS);
+
+		jfxClickButtonEClass = createEClass(JFX_CLICK_BUTTON);
+		createEAttribute(jfxClickButtonEClass, JFX_CLICK_BUTTON__NAME);
+
+		jfxSelectPinEClass = createEClass(JFX_SELECT_PIN);
+		createEAttribute(jfxSelectPinEClass, JFX_SELECT_PIN__ID);
 	}
 
 	/**
@@ -270,6 +377,10 @@ public class CommandsPackageImpl extends EPackageImpl implements CommandsPackage
 		getProblemMessagesEClass.getESuperTypes().add(theCorePackage.getCommand());
 		showViewsEClass.getESuperTypes().add(theCorePackage.getCommand());
 		showViewEClass.getESuperTypes().add(theCorePackage.getCommand());
+		getSupportedDevicesEClass.getESuperTypes().add(theCorePackage.getCommand());
+		jfxCommandEClass.getESuperTypes().add(theCorePackage.getCommand());
+		jfxClickButtonEClass.getESuperTypes().add(this.getJfxCommand());
+		jfxSelectPinEClass.getESuperTypes().add(this.getJfxCommand());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(getProblemMessagesEClass, GetProblemMessages.class, "GetProblemMessages", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -284,8 +395,38 @@ public class CommandsPackageImpl extends EPackageImpl implements CommandsPackage
 		initEAttribute(getView_Label(), theEcorePackage.getEString(), "label", null, 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getView_Description(), theEcorePackage.getEString(), "description", null, 0, 1, View.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(getSupportedDevicesEClass, GetSupportedDevices.class, "GetSupportedDevices", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(jfxCommandEClass, JfxCommand.class, "JfxCommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getJfxCommand_Canvas(), theEcorePackage.getEObject(), null, "canvas", null, 1, 1, JfxCommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(jfxClickButtonEClass, JfxClickButton.class, "JfxClickButton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getJfxClickButton_Name(), theEcorePackage.getEString(), "name", null, 0, 1, JfxClickButton.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(jfxSelectPinEClass, JfxSelectPin.class, "JfxSelectPin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getJfxSelectPin_Id(), theEcorePackage.getEString(), "id", null, 0, 1, JfxSelectPin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/ecl/input
+		createInputAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/ecl/input</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createInputAnnotations() {
+		String source = "http://www.eclipse.org/ecl/input";	
+		addAnnotation
+		  (getJfxCommand_Canvas(), 
+		   source, 
+		   new String[] {
+		   });
 	}
 
 } //CommandsPackageImpl

@@ -1,0 +1,38 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: GetSupportedDevices
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _g85iEOYDEeas8YteS_XeFg
+Runtime-Version: 2.2.0.qualifier
+Save-Time: 1/30/17 8:10 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+global [val supportedDevices [get-supported-devices]]
+
+$supportedDevices | each [val item] {
+    get-menu "Window/Perspective/Open Perspective/Other..." | click
+    with [get-window "Open Perspective"] {
+            get-table | select ".*default.*"
+            get-button OK | click
+        }
+        get-button New | click -arrow
+        get-menu "C Project" | click
+        with [get-window "C Project"] {
+        get-editbox -after [get-label "Project name:"] | set-text [$item | get deviceName]
+        get-table | select "Renesas RXC Toolchain"
+        get-button "Next >" | click
+        with [get-button "..."] {
+            click
+            get-menu [$item | get deviceTarget] | click
+        }
+        get-button "Next >" | click
+    }
+}
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

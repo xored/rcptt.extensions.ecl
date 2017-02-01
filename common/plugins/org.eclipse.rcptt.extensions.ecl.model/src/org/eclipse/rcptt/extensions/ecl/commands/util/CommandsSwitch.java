@@ -15,8 +15,10 @@ import java.util.List;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcptt.ecl.core.Command;
+import org.eclipse.rcptt.extensions.ecl.commands.*;
 import org.eclipse.rcptt.extensions.ecl.commands.CommandsPackage;
 import org.eclipse.rcptt.extensions.ecl.commands.GetProblemMessages;
+import org.eclipse.rcptt.extensions.ecl.commands.GetSupportedDevices;
 import org.eclipse.rcptt.extensions.ecl.commands.ShowView;
 import org.eclipse.rcptt.extensions.ecl.commands.ShowViews;
 import org.eclipse.rcptt.extensions.ecl.commands.View;
@@ -122,6 +124,36 @@ public class CommandsSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CommandsPackage.GET_SUPPORTED_DEVICES: {
+				GetSupportedDevices getSupportedDevices = (GetSupportedDevices)theEObject;
+				T result = caseGetSupportedDevices(getSupportedDevices);
+				if (result == null) result = caseCommand(getSupportedDevices);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CommandsPackage.JFX_COMMAND: {
+				JfxCommand jfxCommand = (JfxCommand)theEObject;
+				T result = caseJfxCommand(jfxCommand);
+				if (result == null) result = caseCommand(jfxCommand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CommandsPackage.JFX_CLICK_BUTTON: {
+				JfxClickButton jfxClickButton = (JfxClickButton)theEObject;
+				T result = caseJfxClickButton(jfxClickButton);
+				if (result == null) result = caseJfxCommand(jfxClickButton);
+				if (result == null) result = caseCommand(jfxClickButton);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CommandsPackage.JFX_SELECT_PIN: {
+				JfxSelectPin jfxSelectPin = (JfxSelectPin)theEObject;
+				T result = caseJfxSelectPin(jfxSelectPin);
+				if (result == null) result = caseJfxCommand(jfxSelectPin);
+				if (result == null) result = caseCommand(jfxSelectPin);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -183,6 +215,66 @@ public class CommandsSwitch<T> {
 	 * @generated
 	 */
 	public T caseView(View object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Get Supported Devices</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Get Supported Devices</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGetSupportedDevices(GetSupportedDevices object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Jfx Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Jfx Command</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJfxCommand(JfxCommand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Jfx Click Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Jfx Click Button</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJfxClickButton(JfxClickButton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Jfx Select Pin</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Jfx Select Pin</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJfxSelectPin(JfxSelectPin object) {
 		return null;
 	}
 

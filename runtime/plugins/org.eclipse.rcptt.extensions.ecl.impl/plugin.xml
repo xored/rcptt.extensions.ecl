@@ -36,5 +36,53 @@
             namespace="http://org/eclipse/rcptt/extensions/ecl/model/commands.ecore">
       </scriptlet>
    </extension>
+   <extension
+         point="org.eclipse.rcptt.ecl.core.scriptlet">
+      <scriptlet
+            class="org.eclipse.rcptt.extensions.ecl.internal.commands.GetSupportedDevicesService"
+            name="GetSupportedDevices"
+            namespace="http://org/eclipse/rcptt/extensions/ecl/model/comands.ecore">
+      </scriptlet>
+   </extension>
+   <extension
+         point="org.eclipse.rcptt.ecl.core.scriptlet">
+      <scriptlet
+            class="org.eclipse.rcptt.extensions.ecl.internal.commands.JfxCommandsService"
+            name="JfxClickButton"
+            namespace="http://org/eclipse/rcptt/extensions/ecl/model/commands.ecore">
+      </scriptlet>
+   </extension>
+   <extension
+         point="org.eclipse.rcptt.ecl.core.scriptlet">
+      <scriptlet
+            class="org.eclipse.rcptt.extensions.ecl.internal.commands.JfxCommandsService"
+            name="JfxSelectPin"
+            namespace="http://org/eclipse/rcptt/extensions/ecl/model/commands.ecore">
+      </scriptlet>
+   </extension>
+   <extension
+         point="org.eclipse.rcptt.ecl.core.scriptlet">
+      <scriptlet
+            class="org.eclipse.rcptt.extensions.ecl.internal.commands.GetSupportedDevicesService"
+            name="GetSupportedDevices"
+            namespace="http://org/eclipse/rcptt/extensions/ecl/model/commands.ecore">
+      </scriptlet>
+   </extension>
+   <extension
+         point="org.eclipse.rcptt.ecl.core.scriptlet">
+      <scriptlet
+            class="org.eclipse.rcptt.extensions.ecl.internal.commands.JfxCommandsService"
+            name="JfxClickButton"
+            namespace="http://org/eclipse/rcptt/extensions/ecl/model/commands.ecore">
+      </scriptlet>
+   </extension>
+   <extension
+         point="org.eclipse.rcptt.ecl.core.scriptlet">
+      <scriptlet
+            class="org.eclipse.rcptt.extensions.ecl.internal.commands.JfxCommandsService"
+            name="JfxSelectPin"
+            namespace="http://org/eclipse/rcptt/extensions/ecl/model/commands.ecore">
+      </scriptlet>
+   </extension>
 
 </plugin>

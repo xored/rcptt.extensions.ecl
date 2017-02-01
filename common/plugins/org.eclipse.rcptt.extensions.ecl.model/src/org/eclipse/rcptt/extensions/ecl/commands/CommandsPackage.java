@@ -13,6 +13,7 @@ package org.eclipse.rcptt.extensions.ecl.commands;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.rcptt.ecl.core.CorePackage;
 
 /**
@@ -229,6 +230,199 @@ public interface CommandsPackage extends EPackage {
 	 */
 	int VIEW_FEATURE_COUNT = 3;
 
+	/**
+	 * The meta object id for the '{@link org.eclipse.rcptt.extensions.ecl.commands.impl.GetSupportedDevicesImpl <em>Get Supported Devices</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.GetSupportedDevicesImpl
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.CommandsPackageImpl#getGetSupportedDevices()
+	 * @generated
+	 */
+	int GET_SUPPORTED_DEVICES = 4;
+
+	/**
+	 * The feature id for the '<em><b>Host</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_SUPPORTED_DEVICES__HOST = CorePackage.COMMAND__HOST;
+
+	/**
+	 * The feature id for the '<em><b>Bindings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_SUPPORTED_DEVICES__BINDINGS = CorePackage.COMMAND__BINDINGS;
+
+	/**
+	 * The number of structural features of the '<em>Get Supported Devices</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GET_SUPPORTED_DEVICES_FEATURE_COUNT = CorePackage.COMMAND_FEATURE_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.rcptt.extensions.ecl.commands.impl.JfxCommandImpl <em>Jfx Command</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.JfxCommandImpl
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.CommandsPackageImpl#getJfxCommand()
+	 * @generated
+	 */
+	int JFX_COMMAND = 5;
+
+	/**
+	 * The feature id for the '<em><b>Host</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_COMMAND__HOST = CorePackage.COMMAND__HOST;
+
+	/**
+	 * The feature id for the '<em><b>Bindings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_COMMAND__BINDINGS = CorePackage.COMMAND__BINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Canvas</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_COMMAND__CANVAS = CorePackage.COMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Jfx Command</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_COMMAND_FEATURE_COUNT = CorePackage.COMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.rcptt.extensions.ecl.commands.impl.JfxClickButtonImpl <em>Jfx Click Button</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.JfxClickButtonImpl
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.CommandsPackageImpl#getJfxClickButton()
+	 * @generated
+	 */
+	int JFX_CLICK_BUTTON = 6;
+
+	/**
+	 * The feature id for the '<em><b>Host</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_CLICK_BUTTON__HOST = JFX_COMMAND__HOST;
+
+	/**
+	 * The feature id for the '<em><b>Bindings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_CLICK_BUTTON__BINDINGS = JFX_COMMAND__BINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Canvas</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_CLICK_BUTTON__CANVAS = JFX_COMMAND__CANVAS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_CLICK_BUTTON__NAME = JFX_COMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Jfx Click Button</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_CLICK_BUTTON_FEATURE_COUNT = JFX_COMMAND_FEATURE_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link org.eclipse.rcptt.extensions.ecl.commands.impl.JfxSelectPinImpl <em>Jfx Select Pin</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.JfxSelectPinImpl
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.CommandsPackageImpl#getJfxSelectPin()
+	 * @generated
+	 */
+	int JFX_SELECT_PIN = 7;
+
+	/**
+	 * The feature id for the '<em><b>Host</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_SELECT_PIN__HOST = JFX_COMMAND__HOST;
+
+	/**
+	 * The feature id for the '<em><b>Bindings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_SELECT_PIN__BINDINGS = JFX_COMMAND__BINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Canvas</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_SELECT_PIN__CANVAS = JFX_COMMAND__CANVAS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_SELECT_PIN__ID = JFX_COMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Jfx Select Pin</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_SELECT_PIN_FEATURE_COUNT = JFX_COMMAND_FEATURE_COUNT + 1;
 
 	/**
 	 * Returns the meta object for class '{@link org.eclipse.rcptt.extensions.ecl.commands.GetProblemMessages <em>Get Problem Messages</em>}'.
@@ -313,6 +507,79 @@ public interface CommandsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getView_Description();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.rcptt.extensions.ecl.commands.GetSupportedDevices <em>Get Supported Devices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Get Supported Devices</em>'.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.GetSupportedDevices
+	 * @generated
+	 */
+	EClass getGetSupportedDevices();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.rcptt.extensions.ecl.commands.JfxCommand <em>Jfx Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Jfx Command</em>'.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.JfxCommand
+	 * @generated
+	 */
+	EClass getJfxCommand();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.eclipse.rcptt.extensions.ecl.commands.JfxCommand#getCanvas <em>Canvas</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Canvas</em>'.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.JfxCommand#getCanvas()
+	 * @see #getJfxCommand()
+	 * @generated
+	 */
+	EReference getJfxCommand_Canvas();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.rcptt.extensions.ecl.commands.JfxClickButton <em>Jfx Click Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Jfx Click Button</em>'.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.JfxClickButton
+	 * @generated
+	 */
+	EClass getJfxClickButton();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.rcptt.extensions.ecl.commands.JfxClickButton#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.JfxClickButton#getName()
+	 * @see #getJfxClickButton()
+	 * @generated
+	 */
+	EAttribute getJfxClickButton_Name();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.rcptt.extensions.ecl.commands.JfxSelectPin <em>Jfx Select Pin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Jfx Select Pin</em>'.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.JfxSelectPin
+	 * @generated
+	 */
+	EClass getJfxSelectPin();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.eclipse.rcptt.extensions.ecl.commands.JfxSelectPin#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.JfxSelectPin#getId()
+	 * @see #getJfxSelectPin()
+	 * @generated
+	 */
+	EAttribute getJfxSelectPin_Id();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -407,6 +674,70 @@ public interface CommandsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VIEW__DESCRIPTION = eINSTANCE.getView_Description();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.rcptt.extensions.ecl.commands.impl.GetSupportedDevicesImpl <em>Get Supported Devices</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.GetSupportedDevicesImpl
+		 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.CommandsPackageImpl#getGetSupportedDevices()
+		 * @generated
+		 */
+		EClass GET_SUPPORTED_DEVICES = eINSTANCE.getGetSupportedDevices();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.rcptt.extensions.ecl.commands.impl.JfxCommandImpl <em>Jfx Command</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.JfxCommandImpl
+		 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.CommandsPackageImpl#getJfxCommand()
+		 * @generated
+		 */
+		EClass JFX_COMMAND = eINSTANCE.getJfxCommand();
+
+		/**
+		 * The meta object literal for the '<em><b>Canvas</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference JFX_COMMAND__CANVAS = eINSTANCE.getJfxCommand_Canvas();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.rcptt.extensions.ecl.commands.impl.JfxClickButtonImpl <em>Jfx Click Button</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.JfxClickButtonImpl
+		 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.CommandsPackageImpl#getJfxClickButton()
+		 * @generated
+		 */
+		EClass JFX_CLICK_BUTTON = eINSTANCE.getJfxClickButton();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JFX_CLICK_BUTTON__NAME = eINSTANCE.getJfxClickButton_Name();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.rcptt.extensions.ecl.commands.impl.JfxSelectPinImpl <em>Jfx Select Pin</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.JfxSelectPinImpl
+		 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.CommandsPackageImpl#getJfxSelectPin()
+		 * @generated
+		 */
+		EClass JFX_SELECT_PIN = eINSTANCE.getJfxSelectPin();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute JFX_SELECT_PIN__ID = eINSTANCE.getJfxSelectPin_Id();
 
 	}
 

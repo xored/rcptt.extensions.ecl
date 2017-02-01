@@ -15,9 +15,11 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import org.eclipse.rcptt.extensions.ecl.commands.*;
 import org.eclipse.rcptt.extensions.ecl.commands.CommandsFactory;
 import org.eclipse.rcptt.extensions.ecl.commands.CommandsPackage;
 import org.eclipse.rcptt.extensions.ecl.commands.GetProblemMessages;
+import org.eclipse.rcptt.extensions.ecl.commands.GetSupportedDevices;
 import org.eclipse.rcptt.extensions.ecl.commands.ShowView;
 import org.eclipse.rcptt.extensions.ecl.commands.ShowViews;
 import org.eclipse.rcptt.extensions.ecl.commands.View;
@@ -70,6 +72,10 @@ public class CommandsFactoryImpl extends EFactoryImpl implements CommandsFactory
 			case CommandsPackage.SHOW_VIEWS: return createShowViews();
 			case CommandsPackage.SHOW_VIEW: return createShowView();
 			case CommandsPackage.VIEW: return createView();
+			case CommandsPackage.GET_SUPPORTED_DEVICES: return createGetSupportedDevices();
+			case CommandsPackage.JFX_COMMAND: return createJfxCommand();
+			case CommandsPackage.JFX_CLICK_BUTTON: return createJfxClickButton();
+			case CommandsPackage.JFX_SELECT_PIN: return createJfxSelectPin();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -113,6 +119,46 @@ public class CommandsFactoryImpl extends EFactoryImpl implements CommandsFactory
 	public View createView() {
 		ViewImpl view = new ViewImpl();
 		return view;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GetSupportedDevices createGetSupportedDevices() {
+		GetSupportedDevicesImpl getSupportedDevices = new GetSupportedDevicesImpl();
+		return getSupportedDevices;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JfxCommand createJfxCommand() {
+		JfxCommandImpl jfxCommand = new JfxCommandImpl();
+		return jfxCommand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JfxClickButton createJfxClickButton() {
+		JfxClickButtonImpl jfxClickButton = new JfxClickButtonImpl();
+		return jfxClickButton;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JfxSelectPin createJfxSelectPin() {
+		JfxSelectPinImpl jfxSelectPin = new JfxSelectPinImpl();
+		return jfxSelectPin;
 	}
 
 	/**

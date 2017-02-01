@@ -1,0 +1,28 @@
+--- RCPTT testcase ---
+Format-Version: 1.0
+Element-Name: JfxCommands
+Element-Type: testcase
+Element-Version: 3.0
+External-Reference: 
+Id: _ikCagOdtEeaELq85SZiCEw
+Runtime-Version: 2.2.0.qualifier
+Save-Time: 2/1/17 9:47 PM
+Testcase-Type: ecl
+
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac
+Content-Type: text/ecl
+Entry-Name: .content
+
+//get-button "New Configuration File" | click
+//with [get-window "New Smart Configuration File"] {
+//    get-editbox -after [get-label "File name:"] | set-text "New Config"
+//    get-button Finish | click
+//}
+//with [get-view "MCU Package" | get-canvas] {
+//	jfx-click-button "Zoom In"
+//	jfx-click-button "Zoom In"
+//	jfx-click-button "Zoom In"
+//	jfx-click-button "Zoom Out"
+//}
+get-view "MCU Package" | get-canvas | jfx-select-pin H1
+------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--

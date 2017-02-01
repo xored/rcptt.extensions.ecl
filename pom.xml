@@ -19,6 +19,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
+		<java.home>C:/Program Files/Java/jdk1.8.0_91</java.home>
 		<tycho-version>0.26.0</tycho-version>
 		<tycho-groupid>org.eclipse.tycho</tycho-groupid>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,6 +52,11 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/rcptt/nightly/2.2.0/latest/repository/</url>
 		</repository>
+		<repository>
+			<id>rcptt-runtime</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/rcptt/nightly/2.2.0/latest/runtime4x/</url>
+		</repository>
 	</repositories>
 
 	<build>
@@ -76,6 +82,23 @@
 				<version>${tycho-version}</version>
 				<configuration>
 					<resolver>p2</resolver>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>${tycho-groupid}</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<extraClasspathElements>
+						<extraClasspathElement>
+							<groupId>com.oracle</groupId>
+							<artifactId>javafx</artifactId>
+							<version>8.0.0-SNAPSHOT</version>
+							<systemPath>${java.home}/jre/lib/jfxswt.jar</systemPath>
+							<scope>system</scope>
+						</extraClasspathElement>
+					</extraClasspathElements>
 				</configuration>
 			</plugin>
 		</plugins>
