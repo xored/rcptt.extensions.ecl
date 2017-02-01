@@ -26,8 +26,8 @@
 
 	<modules>
 		<module>common</module>
-        <module>runtime</module>
-        <module>ide</module>
+		<module>runtime</module>
+		<module>ide</module>
 	</modules>
 
 	<repositories>
@@ -36,16 +36,6 @@
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/releases/neon/</url>
 		</repository>
-	    <repository>
-			<id>orbit</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository/</url>
-	    </repository>
-	    <repository>
-			<id>ajdt37</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/ajdt/37/update/</url>
-	    </repository>
 		<repository>
 			<id>rcptt</id>
 			<layout>p2</layout>

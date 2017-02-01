@@ -26,26 +26,16 @@
 
 				<configuration>
 					<aut>
-						<groupId>org.eclipse</groupId>
-						<artifactId>sdk</artifactId>
-						<version>3.7.2</version>
-						<args>
-							<arg>-consoleLog</arg>
-							<arg>-nosplash</arg>
-						</args>
-						<vmArgs>
-							<vmArg>-Dorg.eclipse.swt.browser.DefaultType=mozilla</vmArg>
-						</vmArgs>
-
+						<explicit>${aut-path}</explicit>
 						<injections>
 							<injection>
 								<site>${project.baseUri}../../runtime/repository/org.eclipse.rcptt.extensions.runtime.site/target/repository</site>
 							</injection>
 						</injections>
 					</aut>
-					<rcptt>
-						<version>${rcptt-version}</version>
-					</rcptt>
+					<runner>
+						<version>${rcptt-runner-version}</version>
+					</runner>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -55,21 +45,22 @@
 		<pluginRepository>
 			<id>rcptt-releases</id>
 			<name>RCPTT Maven repository Releases</name>
-			<url>http://maven.xored.com/nexus/content/repositories/rcptt-releases/</url>
+			<url>https://repo.eclipse.org/content/repositories/rcptt-releases/</url>
 		</pluginRepository>
 		<pluginRepository>
 			<id>rcptt-snapshots</id>
+			<name>RCPTT Maven repository Snapshots</name>
 			<snapshots>
 				<updatePolicy>always</updatePolicy>
 			</snapshots>
-			<name>RCPTT Maven repository Snapshots</name>
 			<url>https://repo.eclipse.org/content/repositories/rcptt-snapshots/</url>
 		</pluginRepository>
 	</pluginRepositories> 
 
 	<properties>
-		<rcptt-version>2.2.0-SNAPSHOT</rcptt-version>
+		<!-- replace with a path to Eclipse IDE -->
+		<aut-path>../eclipse</aut-path>
 		<rcptt-runner-version>2.2.0-SNAPSHOT</rcptt-runner-version>
-		<rcptt-maven-version>2.0.0-SNAPSOT</rcptt-maven-version>
+		<rcptt-maven-version>2.2.0-SNAPSHOT</rcptt-maven-version>
 	</properties>
 </project>
