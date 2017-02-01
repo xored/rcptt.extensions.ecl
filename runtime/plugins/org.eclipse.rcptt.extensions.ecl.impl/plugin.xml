@@ -17,7 +17,7 @@
       <scriptlet
             class="org.eclipse.rcptt.extensions.ecl.internal.commands.GetProblemMessagesService"
             name="GetProblemMessages"
-            namespace="http://org/eclipse/rcptt/extensions/ecl/model/comands.ecore">
+            namespace="http://org/eclipse/rcptt/extensions/ecl/model/commands.ecore">
       </scriptlet>
    </extension>
    <extension
@@ -25,7 +25,7 @@
       <scriptlet
             class="org.eclipse.rcptt.extensions.ecl.internal.commands.ShowViewsService"
             name="ShowViews"
-            namespace="http://org/eclipse/rcptt/extensions/ecl/model/comands.ecore">
+            namespace="http://org/eclipse/rcptt/extensions/ecl/model/commands.ecore">
       </scriptlet>
    </extension>
    <extension
@@ -33,7 +33,7 @@
       <scriptlet
             class="org.eclipse.rcptt.extensions.ecl.internal.commands.ShowViewService"
             name="ShowView"
-            namespace="http://org/eclipse/rcptt/extensions/ecl/model/comands.ecore">
+            namespace="http://org/eclipse/rcptt/extensions/ecl/model/commands.ecore">
       </scriptlet>
    </extension>
 

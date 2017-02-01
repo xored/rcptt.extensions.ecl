@@ -45,7 +45,7 @@ public interface CommandsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://org/eclipse/rcptt/extensions/ecl/model/comands.ecore";
+	String eNS_URI = "http://org/eclipse/rcptt/extensions/ecl/model/commands.ecore";
 
 	/**
 	 * The package namespace name.
