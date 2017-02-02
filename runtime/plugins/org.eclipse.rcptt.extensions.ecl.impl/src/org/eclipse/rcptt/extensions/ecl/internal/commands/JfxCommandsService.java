@@ -14,6 +14,7 @@ import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.embed.swt.FXCanvas;
 import javafx.event.Event;
+import javafx.geometry.Bounds;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -146,8 +147,9 @@ public class JfxCommandsService implements ICommandService {
 				
 				Pane pane = (Pane) childrens.get(index);
 				Group pin = (Group) pane.getChildren().get(1);
+				Bounds bounds = pin.localToScreen(pin.getBoundsInLocal());
 				Event.fireEvent(pin, new MouseEvent(MouseEvent.MOUSE_MOVED,
-						0, 0, 0, 0,
+						0, 0, bounds.getMaxX(), bounds.getMaxY(),
 						MouseButton.NONE,
 						1, true, true, true, true, true, true, true, true, true, true, null));
 			}
@@ -167,13 +169,13 @@ public class JfxCommandsService implements ICommandService {
 		if (lineIndex < 65 || lineIndex > 82 || lineIndex == 73 || lineIndex == 79 || lineIndex == 81) {
 			return -1;
 		}
-		if (lineIndex > 73) {
+		if (lineIndex > 81) {
 			lineIndex -= 1;
 		}
 		if (lineIndex > 79) {
 			lineIndex -= 1;
 		}
-		if (lineIndex > 81) {
+		if (lineIndex > 73) {
 			lineIndex -= 1;
 		}
 		lineIndex -= 64;

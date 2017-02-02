@@ -25,7 +25,6 @@
 				<extensions>true</extensions>
 				<configuration>
 					<aut>
-						<vm>${java-home}</vm>
 						<explicit>${aut-path}</explicit>
 						<injections>
 							<injection>
@@ -44,22 +43,22 @@
 	<pluginRepositories>
 		<pluginRepository>
 			<id>rcptt-releases</id>
-			<name>RCPTT Maven repository</name>
+			<name>RCPTT Maven repository Releases</name>
 			<url>https://repo.eclipse.org/content/repositories/rcptt-releases/</url>
 		</pluginRepository>
 		<pluginRepository>
 			<id>rcptt-snapshots</id>
-			<name>RCPTT Maven Snapshots repository</name>
+			<name>RCPTT Maven repository Snapshots</name>
 			<snapshots>
 				<updatePolicy>always</updatePolicy>
 			</snapshots>
 			<url>https://repo.eclipse.org/content/repositories/rcptt-snapshots/</url>
 		</pluginRepository>
-	</pluginRepositories>
+	</pluginRepositories> 
 
 	<properties>
-		<aut-path>../eclipse</aut-path>
-		<java-home>C:\Program Files (x86)\Java\jdk1.8.0_121</java-home>
+		<!-- replace with a path to SmartConfigurator -->
+		<aut-path>../Renesas/SmartConfigurator for RZA1/V1.00.00/eclipse</aut-path>
 		<rcptt-runner-version>2.2.0-SNAPSHOT</rcptt-runner-version>
 		<rcptt-maven-version>2.2.0-SNAPSHOT</rcptt-maven-version>
 	</properties>

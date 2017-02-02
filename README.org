@@ -6,25 +6,12 @@ The challenge with custom ECL commands is that they should be executed inside an
 
 This example shows a sample Maven build, which allows to build a runtime update site for RCPTT IDE in a single Tycho build, and can be used as a starting point for creating custom application-specific commands.
 
-As an example, we create a custom ECL command *get-problem-messages* which returns all error messages from Problems view (more precisely, it searches for all resource markers with type 'problemmarker' and gets and error messages from them).
+As an example, we create custom ECL commands for *e2studio*
+- get-supported-devices, which returns EclList of EclMap with information about devices
 
-Combined with other ECL commands, this command can be used to assert that there are no errors in Problems view, like this:
-
-#+BEGIN_SRC none
-get-problem-messages | length | eq 0 | assert-true "There are build problems"
-#+END_SRC
-
-Or it can be used to assert that a Problems view contains a certain message:
-#+BEGIN_SRC none
-// here we use 'foreach' as a filter --
-// it returns only those elements, which match
-// to a condition inside an 'if' statement
-get-problem-messages | foreach [val msg] {
-	if [$msg | invoke contains "Foo cannot be resolved to a type"] {
-		$msg
-	}
-} | length | gt 0 | assert-true "Expected problem not found"
-#+END_SRC
+and *SmartConfigurator* (this commands work with JavaFX controls):
+- jfx-click-button, which clicks on a button from toolbar in the Package View
+- jfx-select-pin, which selects a pin in the Package View
 
 *** Structure
 
@@ -46,7 +33,10 @@ A repository is structured as following:
   - plug-in, which holds a binary runtime repository (it is automatically copied inside a plug-in during maven build)
   - feature, which includes ide plug-in and a common feature
   - repository, which provides IDE feature
-- *tests* contains sample RCPTT tests
+- *tests*
+  - rcptt.extensions.ecl.tests, which contains sample RCPTT tests
+  - e2studio.extensions.ecl.tests, which contains sample test for e2studio
+  - smartconfigurator.extensions.ecl.tests, which contains sample test for SmartConfigurator
 
 *** Usage
     Use =mvn clean install -Dtycho.localArtifacts=ignore= in repository root to build Runtime and IDE update sites. After that IDE update site can be installed into RCPTT from =ide/repository/org.eclipse.rcptt.extensions.ide.site/target/repository=. Note that for optimization purposes RCPTT IDE does not check for new injections for existing AUTs, so it is required to remove and add back an AUT in RCPTT after installing/updating RCPTT IDE extensions.
