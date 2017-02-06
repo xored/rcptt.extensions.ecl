@@ -23,7 +23,9 @@ import javafx.scene.control.ToolBar;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import org.eclipse.core.runtime.CoreException;
@@ -126,27 +128,36 @@ public class JfxCommandsService implements ICommandService {
 			@Override
 			public void run() {
 				VBox vbox = (VBox) canvas.getScene().getRoot();
-				ScrollPane scrollPane = (ScrollPane) vbox.getChildren().get(1);			
+				ScrollPane scrollPane = null;
+				for (Node child : vbox.getChildren()) {
+					if (child instanceof ScrollPane) {
+						scrollPane = (ScrollPane) child;
+						break;
+					}
+				}
 				
-				ObservableList<Node> childrens;
-				Node node;	
-				node = scrollPane.getContent();
-				childrens = ((Group) node).getChildren();
-				node = childrens.get(0);
-				childrens = ((Pane) node).getChildren();
-				node = childrens.get(0);
-				childrens = ((Group) node).getChildren();
-				node = childrens.get(0);
-				childrens = ((Pane) node).getChildren();
-				node = childrens.get(0);
-				childrens = ((Group) node).getChildren();
-				node = childrens.get(0);
-				childrens = ((Pane) node).getChildren();
-				node = childrens.get(0);
-				childrens = ((Pane) node).getChildren();
+				Node node = scrollPane.getContent();
+				while ((node instanceof Group || node instanceof Pane)
+						&& !(node instanceof GridPane)) {
+					if (node instanceof Group) {
+						Group group = ((Group) node);
+						node = group.getChildren().get(0);
+					}
+					if (node instanceof Pane) {
+						Pane pane = ((Pane) node);
+						node = pane.getChildren().get(0);
+					}
+				}
 				
-				Pane pane = (Pane) childrens.get(index);
-				Group pin = (Group) pane.getChildren().get(1);
+				ObservableList<Node> pinPanes = ((GridPane) node).getChildren();				
+				StackPane pinPane = (StackPane) pinPanes.get(index);
+				Group pin = null;
+				for (Node child : pinPane.getChildren()) {
+					if (child instanceof Group) {
+						pin = (Group) child;
+						break;
+					}
+				}
 				Bounds bounds = pin.localToScreen(pin.getBoundsInLocal());
 				Event.fireEvent(pin, new MouseEvent(MouseEvent.MOUSE_MOVED,
 						0, 0, bounds.getMaxX(), bounds.getMaxY(),
