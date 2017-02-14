@@ -54,6 +54,7 @@ Open **ecl-dev-neon.target** from **target-platform** project and click 'Set as 
 
 > All added plugins are showing in 'Locations' tab.
 > To add plugin:
+>
 > 1. Click 'Add...' button
 > 2. Select 'Software Site', click 'Next'
 > 3. Add software site
@@ -97,6 +98,7 @@ Open **ecl-dev-neon.target** from **target-platform** project and click 'Set as 
 
 > All added plugins are showing in 'Locations' tab.
 > To add plugin:
+>
 > 1. Click 'Add...' button
 > 2. Select 'Software Site', click 'Next'
 > 3. Add software site
@@ -122,4 +124,4 @@ Open **ecl-dev-neon.target** from **target-platform** project and click 'Set as 
 4. Switch to 'RCPTT' perspective
 5. You should be able to see the AUT in the 'Applications' view and launch it
 
-Troubleshooting: https://www.eclipse.org/rcptt/documentation/faq/install-as-plugin/
+If AUT launching fails with error message 'No org.eclipse.equinox.weaving.hook plugin', see: https://www.eclipse.org/rcptt/documentation/faq/install-as-plugin/
