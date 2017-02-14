@@ -1,0 +1,65 @@
+<!--
+    Copyright (c) 2009, 2016 Xored Software Inc and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+
+    Contributors:
+    	Xored Software Inc - initial API and implementation and/or initial documentation
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.renesas.smartconfigurator</groupId>
+	<artifactId>productTests</artifactId>
+	<version>2.2.0-SNAPSHOT</version>
+	<packaging>rcpttTest</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.rcptt</groupId>
+				<artifactId>rcptt-maven-plugin</artifactId>
+				<version>${rcptt-maven-version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<aut>
+						<explicit>${aut-path}</explicit>
+						<injections>
+							<injection>
+								<site>${project.baseUri}../../runtime/repository/org.eclipse.rcptt.extensions.runtime.site/target/repository</site>
+							</injection>
+						</injections>
+					</aut>
+					<runner>
+						<version>${rcptt-runner-version}</version>
+					</runner>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>rcptt-releases</id>
+			<name>RCPTT Maven repository Releases</name>
+			<url>https://repo.eclipse.org/content/repositories/rcptt-releases/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>rcptt-snapshots</id>
+			<name>RCPTT Maven repository Snapshots</name>
+			<snapshots>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+			<url>https://repo.eclipse.org/content/repositories/rcptt-snapshots/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<properties>
+		<!-- replace with a path to the AUT -->
+		<aut-path>../eclipse</aut-path>
+		<rcptt-runner-version>2.2.0-SNAPSHOT</rcptt-runner-version>
+		<rcptt-maven-version>2.2.0-SNAPSHOT</rcptt-maven-version>
+	</properties>
+</project>

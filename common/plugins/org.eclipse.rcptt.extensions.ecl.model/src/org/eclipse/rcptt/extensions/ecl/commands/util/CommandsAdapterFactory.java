@@ -15,8 +15,10 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.rcptt.ecl.core.Command;
+import org.eclipse.rcptt.extensions.ecl.commands.*;
 import org.eclipse.rcptt.extensions.ecl.commands.CommandsPackage;
 import org.eclipse.rcptt.extensions.ecl.commands.GetProblemMessages;
+import org.eclipse.rcptt.extensions.ecl.commands.GetSupportedDevices;
 import org.eclipse.rcptt.extensions.ecl.commands.ShowView;
 import org.eclipse.rcptt.extensions.ecl.commands.ShowViews;
 import org.eclipse.rcptt.extensions.ecl.commands.View;
@@ -92,6 +94,22 @@ public class CommandsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseView(View object) {
 				return createViewAdapter();
+			}
+			@Override
+			public Adapter caseGetSupportedDevices(GetSupportedDevices object) {
+				return createGetSupportedDevicesAdapter();
+			}
+			@Override
+			public Adapter caseJfxCommand(JfxCommand object) {
+				return createJfxCommandAdapter();
+			}
+			@Override
+			public Adapter caseJfxClickButton(JfxClickButton object) {
+				return createJfxClickButtonAdapter();
+			}
+			@Override
+			public Adapter caseJfxSelectPin(JfxSelectPin object) {
+				return createJfxSelectPinAdapter();
 			}
 			@Override
 			public Adapter caseCommand(Command object) {
@@ -170,6 +188,62 @@ public class CommandsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createViewAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.rcptt.extensions.ecl.commands.GetSupportedDevices <em>Get Supported Devices</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.GetSupportedDevices
+	 * @generated
+	 */
+	public Adapter createGetSupportedDevicesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.rcptt.extensions.ecl.commands.JfxCommand <em>Jfx Command</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.JfxCommand
+	 * @generated
+	 */
+	public Adapter createJfxCommandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.rcptt.extensions.ecl.commands.JfxClickButton <em>Jfx Click Button</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.JfxClickButton
+	 * @generated
+	 */
+	public Adapter createJfxClickButtonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.rcptt.extensions.ecl.commands.JfxSelectPin <em>Jfx Select Pin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.JfxSelectPin
+	 * @generated
+	 */
+	public Adapter createJfxSelectPinAdapter() {
 		return null;
 	}
 

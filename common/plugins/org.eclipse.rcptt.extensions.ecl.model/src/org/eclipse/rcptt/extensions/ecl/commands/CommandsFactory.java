@@ -66,6 +66,42 @@ public interface CommandsFactory extends EFactory {
 	View createView();
 
 	/**
+	 * Returns a new object of class '<em>Get Supported Devices</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Get Supported Devices</em>'.
+	 * @generated
+	 */
+	GetSupportedDevices createGetSupportedDevices();
+
+	/**
+	 * Returns a new object of class '<em>Jfx Command</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Jfx Command</em>'.
+	 * @generated
+	 */
+	JfxCommand createJfxCommand();
+
+	/**
+	 * Returns a new object of class '<em>Jfx Click Button</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Jfx Click Button</em>'.
+	 * @generated
+	 */
+	JfxClickButton createJfxClickButton();
+
+	/**
+	 * Returns a new object of class '<em>Jfx Select Pin</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Jfx Select Pin</em>'.
+	 * @generated
+	 */
+	JfxSelectPin createJfxSelectPin();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
