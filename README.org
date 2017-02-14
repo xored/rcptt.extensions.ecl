@@ -1,4 +1,4 @@
-See Development Environment Setup Guide in [[https://github.com/xored/rcptt.extensions.ecl/blob/master/dev-guide.md][dev-guide.md]] file.
+/See Development Environment Setup Guide in [[https://github.com/xored/rcptt.extensions.ecl/blob/master/dev-guide.md][dev-guide.md]] file/
 
 *** Custom commands overview
 This repository is a complete example on how to create a custom [[http://git.eclipse.org/c/rcptt/org.eclipse.rcptt.git/tree/ecl][ECL]] command and use it in [[https://www.eclipse.org/rcptt/][RCPTT]].
@@ -57,7 +57,19 @@ A repository is structured as following:
   - rcptt.extensions.ecl.get-devices-tests, which contains sample test with *get-supported-devices* command
   - rcptt.extensions.ecl.jfx-tests, which contains sample test with JavaFX commands
 
-*** Usage
-    Use =mvn clean install -Dtycho.localArtifacts=ignore= in repository root to build Runtime and IDE update sites. After that IDE update site can be installed into RCPTT from =ide/repository/org.eclipse.rcptt.extensions.ide.site/target/repository=. Note that for optimization purposes RCPTT IDE does not check for new injections for existing AUTs, so it is required to remove and add back an AUT in RCPTT after installing/updating RCPTT IDE extensions.
+  *** Usage
+  Use =mvn clean install -Dtycho.localArtifacts=ignore= in repository root to build Runtime and IDE update sites. After that IDE update site can be installed into RCPTT from =ide/repository/org.eclipse.rcptt.extensions.ide.site/target/repository=. Note that for optimization purposes RCPTT IDE does not check for new injections for existing AUTs, so it is required to remove and add back an AUT in RCPTT after installing/updating RCPTT IDE extensions.
 
-    Use =mvn clean install= in =tests/rcptt.extensions.ecl= folder to run sample test cases using custom command.
+  To run sample test cases using custom command, use =mvn clean install= in root of any project in =/tests= folder.
+
+  *** How to use custom commands in your project
+  To add external dependencies for the plugin with commands implementation, add this dependencies to root pom.xml file.
+
+  To inject the custom ecl commands to the AUT, add to your pom.xml a link to the runtime update site (for additional information, see 'Injections' section in [[https://www.eclipse.org/rcptt/documentation/userguide/maven/][RCPTT Documentation]]). For each project in =/tests= folder it looks as follows:
+  #+BEGIN_SRC none
+  <injections>
+  	<injection>
+  	<site>${project.baseUri}../../runtime/repository/org.eclipse.rcptt.extensions.runtime.site/target/repository</site>
+  	</injection>
+  </injections>
+  #+END_SRC
