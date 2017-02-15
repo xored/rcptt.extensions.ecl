@@ -1,4 +1,4 @@
-/See Development Environment Setup Guide in [[https://github.com/xored/rcptt.extensions.ecl/blob/master/dev-guide.md][dev-guide.md]] file/
+/See Development Environment Setup Guide in the [[https://github.com/xored/rcptt.extensions.ecl/blob/master/docs/dev-guide.md][docs/dev-guide.md]] file/
 
 *** Custom commands overview
 This repository is a complete example on how to create a custom [[http://git.eclipse.org/c/rcptt/org.eclipse.rcptt.git/tree/ecl][ECL]] command and use it in [[https://www.eclipse.org/rcptt/][RCPTT]].
