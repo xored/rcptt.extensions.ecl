@@ -38,4 +38,4 @@
 
 ### 4. Launch AUT with custom ECL commands
 
-See Launch AUT Guide in the [https://github.com/xored/rcptt.extensions.ecl/blob/master/docs/launch-aut.md](docs/launch-aut.md) file
+See Launch AUT Guide in the [launch-aut.md](https://github.com/xored/rcptt.extensions.ecl/blob/master/docs/launch-aut.md) file
