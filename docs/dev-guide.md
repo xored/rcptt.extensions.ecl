@@ -5,12 +5,18 @@
 1. Go to Help \-> Install New Software
 2. Select software site for current Eclipse version (for Oxygen it is http://download.eclipse.org/releases/oxygen)
 3. Check if following features are installed (and install them if they are not):
-    * **EMF - Eclipse Modeling Framework SDK** feature from **Modeling** category
+    * **EMF - Eclipse Modeling Framework SDK**, **Graphical Modeling Framework (GMF) Tooling SDK** feature from **Modeling** category
     * **Git integration for Eclipse** feature from **Collaboration** category
     * **e(fx)clipse - IDE** feature from **General Purpose Tools** category
 ![alt text](https://github.com/xored/rcptt.extensions.ecl/raw/master/docs/images/oxygen-features.png)
-4. Add **AspectJ Development Tools** software site: http://download.eclipse.org/tools/ajdt/46/dev/update
-5. Install **AspectJ Development Tools** plugin
+4. Add **Orbit** software site: http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository/
+5. Check if following features from **Orbit Bundles By Name: javax.\*** category are installed (and install them if they are not):
+    * **Apache Geronimo Activation Plug-in**
+    * **Java XML Streaming API**
+    * **JAXP XML**
+    * **XML Binding for Java**
+6. Add **AspectJ Development Tools** software site: http://download.eclipse.org/tools/ajdt/46/dev/update
+7. Install **AspectJ Development Tools** plugin
 ![alt text](https://github.com/xored/rcptt.extensions.ecl/raw/master/docs/images/aspectj-feature.png)
 
 ### 2. Set up Target Platform
