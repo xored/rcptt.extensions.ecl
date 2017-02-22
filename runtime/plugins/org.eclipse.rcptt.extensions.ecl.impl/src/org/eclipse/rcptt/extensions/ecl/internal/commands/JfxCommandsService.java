@@ -51,7 +51,7 @@ public class JfxCommandsService implements ICommandService {
 	public IStatus service(Command command, IProcess context) throws InterruptedException, CoreException {
 		JfxCommand jfxCommand = (JfxCommand) command;
 		EObject object = jfxCommand.getCanvas();
-		/*if (object instanceof ControlHandler) {
+		if (object instanceof ControlHandler) {
 			Element element = TeslaBridge.find((ControlHandler) object, context);
 			SWTUIElement swtuiElement = TeslaBridge.getClient().getProcessor(SWTUIProcessor.class).getMapper().get(element);
 			Widget widget = swtuiElement.widget;
@@ -62,7 +62,7 @@ public class JfxCommandsService implements ICommandService {
 				Platform.runLater(jfxJob);
 				return Status.OK_STATUS;
 			}
-		}*/
+		}
 		return Status.CANCEL_STATUS;
 	}
 	
