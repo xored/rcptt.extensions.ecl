@@ -23,6 +23,7 @@ import org.eclipse.rcptt.extensions.ecl.commands.GetProblemMessages;
 import org.eclipse.rcptt.extensions.ecl.commands.GetSupportedDevices;
 import org.eclipse.rcptt.extensions.ecl.commands.JfxClickButton;
 import org.eclipse.rcptt.extensions.ecl.commands.JfxCommand;
+import org.eclipse.rcptt.extensions.ecl.commands.JfxGetPinTable;
 import org.eclipse.rcptt.extensions.ecl.commands.JfxSelectPin;
 import org.eclipse.rcptt.extensions.ecl.commands.ShowView;
 import org.eclipse.rcptt.extensions.ecl.commands.ShowViews;
@@ -90,6 +91,13 @@ public class CommandsPackageImpl extends EPackageImpl implements CommandsPackage
 	 * @generated
 	 */
 	private EClass jfxSelectPinEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass jfxGetPinTableEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -295,6 +303,15 @@ public class CommandsPackageImpl extends EPackageImpl implements CommandsPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getJfxGetPinTable() {
+		return jfxGetPinTableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CommandsFactory getCommandsFactory() {
 		return (CommandsFactory)getEFactoryInstance();
 	}
@@ -340,6 +357,8 @@ public class CommandsPackageImpl extends EPackageImpl implements CommandsPackage
 
 		jfxSelectPinEClass = createEClass(JFX_SELECT_PIN);
 		createEAttribute(jfxSelectPinEClass, JFX_SELECT_PIN__ID);
+
+		jfxGetPinTableEClass = createEClass(JFX_GET_PIN_TABLE);
 	}
 
 	/**
@@ -381,6 +400,7 @@ public class CommandsPackageImpl extends EPackageImpl implements CommandsPackage
 		jfxCommandEClass.getESuperTypes().add(theCorePackage.getCommand());
 		jfxClickButtonEClass.getESuperTypes().add(this.getJfxCommand());
 		jfxSelectPinEClass.getESuperTypes().add(this.getJfxCommand());
+		jfxGetPinTableEClass.getESuperTypes().add(this.getJfxCommand());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(getProblemMessagesEClass, GetProblemMessages.class, "GetProblemMessages", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -405,6 +425,8 @@ public class CommandsPackageImpl extends EPackageImpl implements CommandsPackage
 
 		initEClass(jfxSelectPinEClass, JfxSelectPin.class, "JfxSelectPin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getJfxSelectPin_Id(), theEcorePackage.getEString(), "id", null, 0, 1, JfxSelectPin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(jfxGetPinTableEClass, JfxGetPinTable.class, "JfxGetPinTable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

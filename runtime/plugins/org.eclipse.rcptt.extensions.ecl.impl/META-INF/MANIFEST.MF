@@ -14,7 +14,8 @@ Require-Bundle: org.eclipse.rcptt.ecl.core,
  org.eclipse.rcptt.tesla.ecl.impl,
  org.eclipse.swt,
  org.eclipse.rcptt.tesla.ecl,
- org.eclipse.fx.javafx
+ org.eclipse.fx.javafx,
+ org.eclipse.rcptt.ecl.data;bundle-version="2.2.0"
 Bundle-Vendor: %providerName
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: org.eclipse.rcptt.extensions.ecl.internal.EclExtensionsPlugin

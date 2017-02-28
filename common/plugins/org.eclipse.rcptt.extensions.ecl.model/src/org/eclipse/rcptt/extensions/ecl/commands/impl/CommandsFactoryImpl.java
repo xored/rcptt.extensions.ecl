@@ -76,6 +76,7 @@ public class CommandsFactoryImpl extends EFactoryImpl implements CommandsFactory
 			case CommandsPackage.JFX_COMMAND: return createJfxCommand();
 			case CommandsPackage.JFX_CLICK_BUTTON: return createJfxClickButton();
 			case CommandsPackage.JFX_SELECT_PIN: return createJfxSelectPin();
+			case CommandsPackage.JFX_GET_PIN_TABLE: return createJfxGetPinTable();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -159,6 +160,16 @@ public class CommandsFactoryImpl extends EFactoryImpl implements CommandsFactory
 	public JfxSelectPin createJfxSelectPin() {
 		JfxSelectPinImpl jfxSelectPin = new JfxSelectPinImpl();
 		return jfxSelectPin;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public JfxGetPinTable createJfxGetPinTable() {
+		JfxGetPinTableImpl jfxGetPinTable = new JfxGetPinTableImpl();
+		return jfxGetPinTable;
 	}
 
 	/**

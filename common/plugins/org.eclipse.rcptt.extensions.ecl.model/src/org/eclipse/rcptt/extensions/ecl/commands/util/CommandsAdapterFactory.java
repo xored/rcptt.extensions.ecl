@@ -112,6 +112,10 @@ public class CommandsAdapterFactory extends AdapterFactoryImpl {
 				return createJfxSelectPinAdapter();
 			}
 			@Override
+			public Adapter caseJfxGetPinTable(JfxGetPinTable object) {
+				return createJfxGetPinTableAdapter();
+			}
+			@Override
 			public Adapter caseCommand(Command object) {
 				return createCommandAdapter();
 			}
@@ -244,6 +248,20 @@ public class CommandsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createJfxSelectPinAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.eclipse.rcptt.extensions.ecl.commands.JfxGetPinTable <em>Jfx Get Pin Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.JfxGetPinTable
+	 * @generated
+	 */
+	public Adapter createJfxGetPinTableAdapter() {
 		return null;
 	}
 

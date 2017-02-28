@@ -102,6 +102,15 @@ public interface CommandsFactory extends EFactory {
 	JfxSelectPin createJfxSelectPin();
 
 	/**
+	 * Returns a new object of class '<em>Jfx Get Pin Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Jfx Get Pin Table</em>'.
+	 * @generated
+	 */
+	JfxGetPinTable createJfxGetPinTable();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

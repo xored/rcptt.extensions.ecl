@@ -25,4 +25,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="JfxSelectPin" eSuperTypes="#//JfxCommand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType ../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JfxGetPinTable" eSuperTypes="#//JfxCommand">
+  </eClassifiers>
 </ecore:EPackage>

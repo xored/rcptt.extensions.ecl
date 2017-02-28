@@ -425,6 +425,52 @@ public interface CommandsPackage extends EPackage {
 	int JFX_SELECT_PIN_FEATURE_COUNT = JFX_COMMAND_FEATURE_COUNT + 1;
 
 	/**
+	 * The meta object id for the '{@link org.eclipse.rcptt.extensions.ecl.commands.impl.JfxGetPinTableImpl <em>Jfx Get Pin Table</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.JfxGetPinTableImpl
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.CommandsPackageImpl#getJfxGetPinTable()
+	 * @generated
+	 */
+	int JFX_GET_PIN_TABLE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Host</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_GET_PIN_TABLE__HOST = JFX_COMMAND__HOST;
+
+	/**
+	 * The feature id for the '<em><b>Bindings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_GET_PIN_TABLE__BINDINGS = JFX_COMMAND__BINDINGS;
+
+	/**
+	 * The feature id for the '<em><b>Canvas</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_GET_PIN_TABLE__CANVAS = JFX_COMMAND__CANVAS;
+
+	/**
+	 * The number of structural features of the '<em>Jfx Get Pin Table</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JFX_GET_PIN_TABLE_FEATURE_COUNT = JFX_COMMAND_FEATURE_COUNT + 0;
+
+	/**
 	 * Returns the meta object for class '{@link org.eclipse.rcptt.extensions.ecl.commands.GetProblemMessages <em>Get Problem Messages</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -580,6 +626,16 @@ public interface CommandsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getJfxSelectPin_Id();
+
+	/**
+	 * Returns the meta object for class '{@link org.eclipse.rcptt.extensions.ecl.commands.JfxGetPinTable <em>Jfx Get Pin Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Jfx Get Pin Table</em>'.
+	 * @see org.eclipse.rcptt.extensions.ecl.commands.JfxGetPinTable
+	 * @generated
+	 */
+	EClass getJfxGetPinTable();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -738,6 +794,16 @@ public interface CommandsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute JFX_SELECT_PIN__ID = eINSTANCE.getJfxSelectPin_Id();
+
+		/**
+		 * The meta object literal for the '{@link org.eclipse.rcptt.extensions.ecl.commands.impl.JfxGetPinTableImpl <em>Jfx Get Pin Table</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.JfxGetPinTableImpl
+		 * @see org.eclipse.rcptt.extensions.ecl.commands.impl.CommandsPackageImpl#getJfxGetPinTable()
+		 * @generated
+		 */
+		EClass JFX_GET_PIN_TABLE = eINSTANCE.getJfxGetPinTable();
 
 	}
 

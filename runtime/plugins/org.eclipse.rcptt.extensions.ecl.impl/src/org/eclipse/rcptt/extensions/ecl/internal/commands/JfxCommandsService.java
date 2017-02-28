@@ -10,6 +10,23 @@
  *******************************************************************************/
 package org.eclipse.rcptt.extensions.ecl.internal.commands;
 
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.rcptt.ecl.core.Command;
+import org.eclipse.rcptt.ecl.runtime.ICommandService;
+import org.eclipse.rcptt.ecl.runtime.IProcess;
+import org.eclipse.rcptt.extensions.ecl.commands.JfxClickButton;
+import org.eclipse.rcptt.extensions.ecl.commands.JfxCommand;
+import org.eclipse.rcptt.extensions.ecl.commands.JfxSelectPin;
+import org.eclipse.rcptt.tesla.core.protocol.raw.Element;
+import org.eclipse.rcptt.tesla.ecl.impl.TeslaBridge;
+import org.eclipse.rcptt.tesla.ecl.model.ControlHandler;
+import org.eclipse.rcptt.tesla.internal.ui.player.SWTUIElement;
+import org.eclipse.rcptt.tesla.internal.ui.processors.SWTUIProcessor;
+import org.eclipse.swt.widgets.Widget;
+
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.embed.swt.FXCanvas;
@@ -27,23 +44,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.Status;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.rcptt.ecl.core.Command;
-import org.eclipse.rcptt.ecl.runtime.ICommandService;
-import org.eclipse.rcptt.ecl.runtime.IProcess;
-import org.eclipse.rcptt.extensions.ecl.commands.JfxClickButton;
-import org.eclipse.rcptt.extensions.ecl.commands.JfxCommand;
-import org.eclipse.rcptt.extensions.ecl.commands.JfxSelectPin;
-import org.eclipse.rcptt.tesla.core.protocol.raw.Element;
-import org.eclipse.rcptt.tesla.ecl.impl.TeslaBridge;
-import org.eclipse.rcptt.tesla.ecl.model.ControlHandler;
-import org.eclipse.rcptt.tesla.internal.ui.player.SWTUIElement;
-import org.eclipse.rcptt.tesla.internal.ui.processors.SWTUIProcessor;
-import org.eclipse.swt.widgets.Widget;
 
 public class JfxCommandsService implements ICommandService {
 
@@ -87,7 +87,7 @@ public class JfxCommandsService implements ICommandService {
 		}
 		return null;
 	}
-	
+
 	private Runnable getClickButtonJob(final FXCanvas canvas, final int index) {
 		Runnable job = new Runnable() {
 			@Override

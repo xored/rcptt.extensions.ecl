@@ -154,6 +154,14 @@ public class CommandsSwitch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case CommandsPackage.JFX_GET_PIN_TABLE: {
+				JfxGetPinTable jfxGetPinTable = (JfxGetPinTable)theEObject;
+				T result = caseJfxGetPinTable(jfxGetPinTable);
+				if (result == null) result = caseJfxCommand(jfxGetPinTable);
+				if (result == null) result = caseCommand(jfxGetPinTable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -275,6 +283,21 @@ public class CommandsSwitch<T> {
 	 * @generated
 	 */
 	public T caseJfxSelectPin(JfxSelectPin object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Jfx Get Pin Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Jfx Get Pin Table</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseJfxGetPinTable(JfxGetPinTable object) {
 		return null;
 	}
 
