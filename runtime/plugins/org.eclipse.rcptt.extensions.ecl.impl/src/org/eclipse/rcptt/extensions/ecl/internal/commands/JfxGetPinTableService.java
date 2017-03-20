@@ -102,10 +102,12 @@ public class JfxGetPinTableService implements ICommandService {
 				ObservableList<Node> pinPanes = ((GridPane) node).getChildren();
 
 				Table table = ObjectsFactory.eINSTANCE.createTable();
-				table.getColumns().add("Pin Number");
+				Row header = ObjectsFactory.eINSTANCE.createRow();
+				header.getValues().add("Pin Number");
 				for (int i = 1; i <= 15; i++) {
-					table.getColumns().add(String.valueOf(i));
+					header.getValues().add(String.valueOf(i));
 				}
+				table.getRows().add(header);
 
 				int index = 0;
 				int prevX = 1;
