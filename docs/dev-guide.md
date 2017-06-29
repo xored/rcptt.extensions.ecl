@@ -26,7 +26,7 @@
 ![alt text](https://github.com/xored/rcptt.extensions.ecl/raw/master/docs/images/target-platform.png)
 3. Click 'Add...' button
 4. Select 'Software Site', click 'Next'
-5. Add **RCPTT Runtime** software site: http://download.eclipse.org/rcptt/nightly/2.2.0/latest/runtime4x/
+5. Add **RCPTT Runtime** software site: http://download.eclipse.org/rcptt/nightly/2.3.0/latest/runtime4x/
 6. Select all features and check 'Include All Environment' option
 ![alt text](https://github.com/xored/rcptt.extensions.ecl/raw/master/docs/images/rcptt-runtime.png)
 7. Click 'Finish'
