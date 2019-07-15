@@ -11,8 +11,6 @@
         <relativePath>../../../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.xored.q7.extensions.ecl</groupId>
     <artifactId>com.xored.q7.extensions.tesla.processor</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <packaging>eclipse-plugin</packaging>
 </project>

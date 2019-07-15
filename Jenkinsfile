@@ -64,5 +64,18 @@ spec:
         archiveArtifacts allowEmptyArchive: true, artifacts: 'runtime/repository/org.eclipse.rcptt.extensions.runtime.site/target/repository/**/*'
       }
     }
+    stage('Tests'){
+      steps {
+        container('ubuntu') {
+          sh './tests/run_tests.sh'
+        }       
+      }
+    }
+  }
+  post {
+    always {
+      junit 'tests/**/target/*-reports/*.xml'
+      archiveArtifacts allowEmptyArchive: true, artifacts: 'tests/**/target/results/**/*, tests/**/target/**/*err*log, tests/**/target/runner-workspace/**/*, tests/**/target/**/.log'
+    }
   }
 }
